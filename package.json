@@ -1,0 +1,16 @@
+{
+  "name": "lorapok-dynamic-ollama-llm-chat-interface",
+  "version": "1.0.0",
+  "description": "A comprehensive, dynamic console-based interface for interacting with Ollama LLMs",
+  "author": "GitHub Copilot",
+  "license": "MIT",
+  "keywords": ["ollama", "llm", "chat", "ai", "console", "dynamic"],
+  "engines": {
+    "python": ">=3.8.0"
+  },
+  "dependencies": {
+    "requests": ">=2.28.0",
+    "rich": ">=13.0.0",
+    "psutil": ">=5.9.0"
+  }
+}

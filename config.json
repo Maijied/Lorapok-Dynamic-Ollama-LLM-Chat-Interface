@@ -1,0 +1,11 @@
+{
+  "server_ip": "192.168.0.219",
+  "default_model": "qwen2.5-coder:7b-instruct",
+  "max_history": 100,
+  "auto_save": true,
+  "theme": "default",
+  "show_timestamps": true,
+  "stream_responses": true,
+  "timeout": 120,
+  "max_retries": 3
+}
