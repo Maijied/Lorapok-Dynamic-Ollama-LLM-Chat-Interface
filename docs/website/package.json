@@ -1,0 +1,34 @@
+{
+  "name": "lorapok-ollama-chat-website",
+  "version": "1.0.0",
+  "description": "Professional GitHub Pages website for Lorapok Dynamic Ollama LLM Chat Interface",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --host=0.0.0.0",
+    "dev": "live-server --port=3000 --host=localhost",
+    "build": "echo 'Static site - no build required'",
+    "test": "echo 'No tests specified'",
+    "validate": "python validate_site.py"
+  },
+  "keywords": [
+    "ollama",
+    "llm",
+    "chat",
+    "ai",
+    "interface",
+    "lorapok"
+  ],
+  "author": "Lorapok",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/issues"
+  },
+  "homepage": "https://maijied.github.io/Lorapok-Dynamic-Ollama-LLM-Chat-Interface"
+}

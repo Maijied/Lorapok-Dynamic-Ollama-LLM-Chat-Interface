@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorapok Dynamic Ollama LLM Chat Interface</title>
+    <meta name="description" content="Professional dynamic console interface for Ollama LLMs with real-time performance monitoring, advanced conversation management, and cross-platform compatibility.">
+    <meta name="keywords" content="Ollama, LLM, Chat Interface, AI, Dynamic, Console, Cross-platform">
+    <meta name="author" content="Lorapok Team">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-robot"></i>
+                <span>LORAPOK</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">FEATURES</a>
+                <a href="#demo">DEMO</a>
+                <a href="#requirements">REQUIREMENTS</a>
+                <a href="#download">DOWNLOAD</a>
+                <a href="#api">API</a>
+                <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface" target="_blank">
+                    <i class="fab fa-github"></i> GITHUB
+                </a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">SUPERCOMPUTING</span><br>
+                    <span class="hero-subtitle">LLM ENGINE</span>
+                </h1>
+                <p class="hero-description">
+                    Biological Intelligence meets Ultra-Performance Chat.<br>
+                    Experience the next generation of AI interaction with our dynamic console interface.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#demo" class="btn btn-primary">
+                        <i class="fas fa-play"></i> TRY LIVE DEMO
+                    </a>
+                    <a href="#download" class="btn btn-secondary">
+                        <i class="fas fa-download"></i> DOWNLOAD V1.0.0
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="terminal-demo">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="terminal-button red"></span>
+                            <span class="terminal-button yellow"></span>
+                            <span class="terminal-button green"></span>
+                        </div>
+                        <div class="terminal-title">Lorapok Dynamic Chat</div>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">🤖 Lorapok Dynamic Ollama LLM Chat Interface</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-text">Connected to: 192.168.0.219</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-text">Current Model: qwen2.5-coder:7b-instruct</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">You:</span> <span class="typing-animation">Hello, how are you?</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-ai">Assistant (qwen2.5-coder:7b-instruct)</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-response">Hello! I'm doing well, thank you for asking...</span>
+                        </div>
+                        <div class="terminal-cursor">▊</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-pattern"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">ENGINE CAPABILITIES</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Neural Processing</h3>
+                    <p>Advanced LLM integration with dynamic model switching and real-time performance optimization.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <h3>Dynamic Console</h3>
+                    <p>Rich interactive terminal interface with live streaming, colored output, and command system.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Smart Search</h3>
+                    <p>Advanced conversation search and filtering with persistent history management.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Performance Monitor</h3>
+                    <p>Real-time benchmarking, token tracking, and system resource monitoring.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Dynamic Config</h3>
+                    <p>Runtime configuration with persistent settings and flexible customization options.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Cross-Platform</h3>
+                    <p>Native support for Windows, macOS, and Linux with unified experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2 class="section-title">LIVE DEMO</h2>
+            <div class="demo-container">
+                <div class="demo-terminal">
+                    <div class="demo-header">
+                        <span class="demo-title">Lorapok Dynamic Chat Demo</span>
+                    </div>
+                    <div class="demo-content" id="demo-content">
+                        <div class="demo-line">$ python src/ollama_client.py</div>
+                        <div class="demo-line">🚀 Starting Lorapok Dynamic Ollama LLM Chat Interface...</div>
+                        <div class="demo-line">🔗 Connecting to 192.168.0.219...</div>
+                        <div class="demo-line">🤖 Lorapok Dynamic Ollama LLM Chat Interface</div>
+                        <div class="demo-line">Connected to: 192.168.0.219</div>
+                        <div class="demo-line">Current Model: qwen2.5-coder:7b-instruct</div>
+                        <div class="demo-line">Available Models: 5</div>
+                        <div class="demo-line">You: Hello, can you help me with Python?</div>
+                        <div class="demo-line">Assistant (qwen2.5-coder:7b-instruct)</div>
+                        <div class="demo-line">Hello! I'd be happy to help you with Python...</div>
+                        <div class="demo-line">You: /stats</div>
+                        <div class="demo-line">Conversation Statistics:</div>
+                        <div class="demo-line">Total Messages: 2</div>
+                        <div class="demo-line">Avg Response Time: 1.2s</div>
+                        <div class="demo-line">Total Tokens: 245</div>
+                        <div class="demo-line">You: /model llama2:7b</div>
+                        <div class="demo-line">✅ Switched to: llama2:7b</div>
+                        <div class="demo-line">You: Tell me a joke</div>
+                        <div class="demo-line">Assistant (llama2:7b)</div>
+                        <div class="demo-line">Why don't scientists trust atoms?</div>
+                        <div class="demo-line">Because they make up everything! 🤡</div>
+                    </div>
+                </div>
+                <div class="demo-info">
+                    <h3>Experience the Power</h3>
+                    <p>Watch our dynamic interface in action with real-time model switching, performance monitoring, and intelligent conversation management.</p>
+                    <div class="demo-features">
+                        <div class="demo-feature">
+                            <i class="fas fa-bolt"></i>
+                            <span>Live Streaming</span>
+                        </div>
+                        <div class="demo-feature">
+                            <i class="fas fa-palette"></i>
+                            <span>Rich UI</span>
+                        </div>
+                        <div class="demo-feature">
+                            <i class="fas fa-search"></i>
+                            <span>Smart Search</span>
+                        </div>
+                        <div class="demo-feature">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Section -->
+    <section id="requirements" class="requirements">
+        <div class="container">
+            <h2 class="section-title">SYSTEM REQUIREMENTS</h2>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h3><i class="fas fa-desktop"></i> DESKTOP APPLICATION</h3>
+                    <div class="requirement-details">
+                        <div class="requirement-item">
+                            <strong>OS</strong>
+                            <span>Windows 10+, macOS 12+, Ubuntu 22.04+</span>
+                        </div>
+                        <div class="requirement-item">
+                            <strong>CPU</strong>
+                            <span>Dual Core 2.0GHz (Quad Core 3.0GHz+ Recommended)</span>
+                        </div>
+                        <div class="requirement-item">
+                            <strong>RAM</strong>
+                            <span>4 GB (8 GB+ Recommended)</span>
+                        </div>
+                        <div class="requirement-item">
+                            <strong>Storage</strong>
+                            <span>2 GB free space</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="requirement-card">
+                    <h3><i class="fas fa-code"></i> PYTHON PACKAGE</h3>
+                    <div class="requirement-details">
+                        <div class="requirement-item">
+                            <strong>Python</strong>
+                            <span>v3.8 or higher (3.11+ Recommended)</span>
+                        </div>
+                        <div class="requirement-item">
+                            <strong>Packages</strong>
+                            <span>requests, rich, psutil</span>
+                        </div>
+                        <div class="requirement-item">
+                            <strong>Ollama</strong>
+                            <span>v0.1.0 or higher</span>
+                        </div>
+                        <div class="requirement-item">
+                            <strong>Network</strong>
+                            <span>Local network access</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commands Section -->
+    <section class="commands">
+        <div class="container">
+            <h2 class="section-title">COMMAND SYSTEM</h2>
+            <div class="commands-grid">
+                <div class="command-category">
+                    <h3><i class="fas fa-robot"></i> MODEL MANAGEMENT</h3>
+                    <div class="command-list">
+                        <div class="command-item">
+                            <code>/model <name></code>
+                            <span>Switch to different model</span>
+                        </div>
+                        <div class="command-item">
+                            <code>/models</code>
+                            <span>List available models</span>
+                        </div>
+                        <div class="command-item">
+                            <code>/pull <model></code>
+                            <span>Download new model</span>
+                        </div>
+                        <div class="command-item">
+                            <code>/remove <model></code>
+                            <span>Remove installed model</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-category">
+                    <h3><i class="fas fa-comments"></i> CONVERSATION</h3>
+                    <div class="command-list">
+                        <div class="command-item">
+                            <code>/history [limit]</code>
+                            <span>Show chat history</span>
+                        </div>
+                        <div class="command-item">
+                            <code>/search <query></code>
+                            <span>Search conversations</span>
+                        </div>
+                        <div class="command-item">
+                            <code>/save [filename]</code>
+                            <span>Save conversation</span>
+                        </div>
+                        <div class="command-item">
+                            <code>/clear</code>
+                            <span>Clear history</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-category">
+                    <h3><i class="fas fa-chart-line"></i> MONITORING</h3>
+                    <div class="command-list">
+                        <div class="command-item">
+                            <code>/stats</code>
+                            <span>Show statistics</span>
+                        </div>
+                        <div class="command-item">
+                            <code>/bench [model]</code>
+                            <span>Benchmark performance</span>
+                        </div>
+                        <div class="command-item">
+                            <code>/sysinfo</code>
+                            <span>System information</span>
+                        </div>
+                        <div class="command-item">
+                            <code>/config</code>
+                            <span>Show configuration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <h2 class="section-title">GET LORAPOK DYNAMIC CHAT</h2>
+            <div class="download-grid">
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python Package</h3>
+                    <p>Install via pip for development and integration</p>
+                    <div class="download-code">
+                        <code>pip install -r requirements.txt</code>
+                    </div>
+                    <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/archive/refs/tags/v1.0.0.zip" class="btn btn-outline">
+                        <i class="fas fa-download"></i> DOWNLOAD SOURCE
+                    </a>
+                </div>
+                <div class="download-card featured">
+                    <div class="download-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub Repository</h3>
+                    <p>Clone the complete project with all features</p>
+                    <div class="download-code">
+                        <code>git clone https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface.git</code>
+                    </div>
+                    <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> VIEW ON GITHUB
+                    </a>
+                </div>
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Documentation</h3>
+                    <p>Complete setup and usage documentation</p>
+                    <div class="download-links">
+                        <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/tree/main/docs">Setup Guide</a>
+                        <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/tree/main/docs">Usage Guide</a>
+                        <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/tree/main/docs">API Reference</a>
+                    </div>
+                    <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/tree/main/docs" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-external-link-alt"></i> VIEW DOCS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Section -->
+    <section id="api" class="api">
+        <div class="container">
+            <h2 class="section-title">READY TO INTEGRATE?</h2>
+            <div class="api-content">
+                <div class="api-code">
+                    <h3>Python Integration</h3>
+                    <pre><code>from src.ollama_client import OllamaClient
+
+# Initialize client
+client = OllamaClient("192.168.0.219")
+
+# Start interactive chat
+client.chat()
+
+# Or use programmatically
+response = client.generate("Hello, AI!")
+print(response)</code></pre>
+                </div>
+                <div class="api-features">
+                    <h3>Integration Features</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> RESTful API compatible</li>
+                        <li><i class="fas fa-check"></i> Streaming responses</li>
+                        <li><i class="fas fa-check"></i> Model management</li>
+                        <li><i class="fas fa-check"></i> Performance monitoring</li>
+                        <li><i class="fas fa-check"></i> Conversation history</li>
+                        <li><i class="fas fa-check"></i> Cross-platform support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-robot"></i>
+                    <span>LORAPOK DYNAMIC CHAT</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#features">Features</a>
+                    <a href="#demo">Demo</a>
+                    <a href="#requirements">Requirements</a>
+                    <a href="#download">Download</a>
+                    <a href="#api">API</a>
+                    <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface" target="_blank">GitHub</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/Maijied" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://maijied.github.io/Lorapok_Media_Player/" target="_blank"><i class="fas fa-play"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LORAPOK TEAM. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

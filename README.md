@@ -17,6 +17,18 @@ This project provides a complete setup for running Large Language Models (LLMs) 
 - ✅ Run API server for programmatic access
 - ✅ Cross-platform support (Windows/Mac/Linux)
 
+## 🌐 Website & Documentation
+
+Visit our [professional website](https://maijied.github.io/Lorapok-Dynamic-Ollama-LLM-Chat-Interface) for:
+- 📖 Complete documentation and guides
+- 🎯 Interactive feature demonstrations
+- 📋 Installation instructions for all platforms
+- 🔧 API reference and integration examples
+- 📊 Performance benchmarks and comparisons
+- 💻 Code examples and usage patterns
+
+The website includes a live terminal demo, download links, and comprehensive guides to get you started quickly.
+
 ## 🚀 Quick Start
 
 1. **Install Dependencies**
@@ -93,6 +105,13 @@ This project provides a complete setup for running Large Language Models (LLMs) 
 │   ├── conversation_manager.py  # Conversation handling
 │   └── performance_monitor.py   # Performance tracking
 ├── docs/               # Documentation
+│   └── website/         # GitHub Pages website
+│       ├── index.html   # Main website
+│       ├── styles.css   # Professional styling
+│       ├── script.js    # Interactive features
+│       └── README.md    # Website documentation
+├── .github/            # GitHub Actions workflows
+│   └── workflows/       # CI/CD automation
 ├── config.json         # Configuration file
 └── README.md          # This file
 ```
