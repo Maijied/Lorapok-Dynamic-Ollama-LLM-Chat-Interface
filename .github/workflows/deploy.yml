@@ -25,6 +25,11 @@ jobs:
         cd docs/website
         npm install
 
+    - name: Clean up node_modules for deployment
+      run: |
+        cd docs/website
+        if [ -d "node_modules" ]; then rm -rf node_modules; fi
+
     - name: Validate HTML
       run: |
         cd docs/website
