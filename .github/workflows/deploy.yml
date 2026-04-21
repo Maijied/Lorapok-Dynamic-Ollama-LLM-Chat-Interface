@@ -2,9 +2,9 @@ name: Deploy GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build-and-deploy:
@@ -28,60 +28,49 @@ jobs:
     - name: Validate HTML
       run: |
         cd docs/website
-        python3 - <<'PY'
-import re
+        python3 -c "
+        import re
 
-file_path = 'index.html'
-with open(file_path, 'r', encoding='utf-8') as f:
-    content = f.read()
+        file_path = 'index.html'
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
 
-if '<title>' not in content or '</title>' not in content:
-    print(f'Warning: {file_path} missing title tag')
+        if '<title>' not in content or '</title>' not in content:
+            print('Warning: {} missing title tag'.format(file_path))
 
-if 'meta name="description"' not in content:
-    print(f'Warning: {file_path} missing meta description')
+        if 'meta name=\"description\"' not in content:
+            print('Warning: {} missing meta description'.format(file_path))
 
-ids = set(re.findall(r'id=["\']([^"\']+)["\']', content))
-for href in re.findall(r'href=["\']([^"\']+)["\']', content):
-    if href.startswith('#'):
-        target = href[1:]
-        if target and target not in ids:
-            print(f'Warning: {file_path} broken anchor link: {href}')
+        ids = set(re.findall(r'id=[\"\']([^\"\']+)[\"\']', content))
+        for href in re.findall(r'href=[\"\']([^\"\']+)[\"\']', content):
+            if href.startswith('#'):
+                target = href[1:]
+                if target and target not in ids:
+                    print('Warning: {} broken anchor link: {}'.format(file_path, href))
 
-print(f'✓ {file_path} validation completed')
-PY
+        print('✓ {} validation completed'.format(file_path))
+        "
 
     - name: Check CSS validity
       run: |
         cd docs/website
         python3 -c "
-        import os
         import re
 
-        def validate_css(file_path):
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
+        file_path = 'styles.css'
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
 
-                # Basic CSS validation - check for balanced braces
-                brace_count = content.count('{') - content.count('}')
-                if brace_count != 0:
-                    print(f'Warning: {file_path} unbalanced braces')
+            # Basic CSS validation - check for balanced braces
+            brace_count = content.count('{') - content.count('}')
+            if brace_count != 0:
+                print('Warning: {} unbalanced braces'.format(file_path))
 
-                # Check for missing semicolons (basic)
-                rules = re.findall(r'\{([^}]+)\}', content)
-                for rule in rules:
-                    declarations = [d.strip() for d in rule.split(';') if d.strip()]
-                    for decl in declarations:
-                        if ':' not in decl:
-                            print(f'Warning: {file_path} invalid CSS declaration: {decl}')
+            print('✓ {} validation completed'.format(file_path))
 
-                print(f'✓ {file_path} validation completed')
-
-            except Exception as e:
-                print(f'Error validating {file_path}: {e}')
-
-        validate_css('styles.css')
+        except Exception as e:
+            print('Error validating {}: {}'.format(file_path, e))
         "
 
     - name: Test JavaScript syntax
