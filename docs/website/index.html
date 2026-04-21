@@ -7,25 +7,43 @@
     <meta name="description" content="Professional dynamic console interface for Ollama LLMs with real-time performance monitoring, advanced conversation management, and cross-platform compatibility.">
     <meta name="keywords" content="Ollama, LLM, Chat Interface, AI, Dynamic, Console, Cross-platform">
     <meta name="author" content="Lorapok Team">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="fas fa-rocket"></i>
+                <span>LORAPOK</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Initializing AI Engine...</p>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <i class="fas fa-robot"></i>
+                <div class="logo-icon">
+                    <i class="fas fa-brain"></i>
+                    <div class="logo-glow"></div>
+                </div>
                 <span>LORAPOK</span>
             </div>
             <div class="nav-links">
-                <a href="#features">FEATURES</a>
-                <a href="#demo">DEMO</a>
-                <a href="#requirements">REQUIREMENTS</a>
-                <a href="#download">DOWNLOAD</a>
-                <a href="#api">API</a>
-                <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface" target="_blank">
+                <a href="#home" class="nav-link">HOME</a>
+                <a href="#features" class="nav-link">FEATURES</a>
+                <a href="#demo" class="nav-link">DEMO</a>
+                <a href="#guide" class="nav-link">GUIDE</a>
+                <a href="#download" class="nav-link">DOWNLOAD</a>
+                <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface" target="_blank" class="nav-link github-link">
                     <i class="fab fa-github"></i> GITHUB
                 </a>
             </div>
@@ -35,19 +53,112 @@
                 <span></span>
             </div>
         </div>
+        <div class="nav-backdrop"></div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-particles"></div>
+            <div class="hero-gradient"></div>
+        </div>
         <div class="hero-container">
             <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-crown"></i>
+                    <span>PREMIUM AI INTERFACE</span>
+                </div>
                 <h1 class="hero-title">
-                    <span class="gradient-text">SUPERCOMPUTING</span><br>
-                    <span class="hero-subtitle">LLM ENGINE</span>
+                    <span class="title-main">LORAPOK</span>
+                    <span class="title-sub">Dynamic LLM Engine</span>
                 </h1>
                 <p class="hero-description">
-                    Biological Intelligence meets Ultra-Performance Chat.<br>
-                    Experience the next generation of AI interaction with our dynamic console interface.
+                    Experience the future of AI interaction with our revolutionary console interface.
+                    Built for performance, designed for productivity.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Models Supported</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="1000">0</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="99">0</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#demo" class="btn btn-primary">
+                        <div class="btn-content">
+                            <i class="fas fa-play"></i>
+                            <span>LAUNCH DEMO</span>
+                        </div>
+                        <div class="btn-glow"></div>
+                    </a>
+                    <a href="#guide" class="btn btn-secondary">
+                        <div class="btn-content">
+                            <i class="fas fa-book"></i>
+                            <span>READ GUIDE</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="terminal-container">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-controls">
+                                <span class="control red"></span>
+                                <span class="control yellow"></span>
+                                <span class="control green"></span>
+                            </div>
+                            <div class="terminal-title">
+                                <i class="fas fa-terminal"></i>
+                                Lorapok Dynamic Chat v1.0.0
+                            </div>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-output">
+                                <div class="terminal-line">
+                                    <span class="terminal-prompt">🚀</span>
+                                    <span class="terminal-text">Initializing Lorapok Dynamic Engine...</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-success">✓</span>
+                                    <span class="terminal-text">Connected to Ollama server at 192.168.0.219</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-info">ℹ</span>
+                                    <span class="terminal-text">Loading model: qwen2.5-coder:7b-instruct</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-prompt">></span>
+                                    <span class="terminal-input">Hello, can you help me with Python development?</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-ai">🤖 Assistant</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-response typing">Absolutely! I'd be happy to help you with Python development. What specific task are you working on?</span>
+                                </div>
+                                <div class="terminal-cursor">▊</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="terminal-glow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
                 </p>
                 <div class="hero-buttons">
                     <a href="#demo" class="btn btn-primary">
@@ -97,50 +208,110 @@
 
     <!-- Features Section -->
     <section id="features" class="features">
+        <div class="features-bg">
+            <div class="features-particles"></div>
+        </div>
         <div class="container">
-            <h2 class="section-title">ENGINE CAPABILITIES</h2>
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-star"></i>
+                    <span>CORE FEATURES</span>
+                </div>
+                <h2 class="section-title">ENGINE CAPABILITIES</h2>
+                <p class="section-description">
+                    Experience the most advanced AI interface with cutting-edge features designed for productivity and performance.
+                </p>
+            </div>
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-brain"></i>
+                <div class="feature-card" data-aos="fade-up" data-delay="0">
+                    <div class="feature-glass">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3>Neural Processing</h3>
+                        <p>Advanced LLM integration with dynamic model switching and real-time performance optimization for maximum efficiency.</p>
+                        <div class="feature-stats">
+                            <span class="stat">50+ Models</span>
+                            <span class="stat">Real-time</span>
+                        </div>
                     </div>
-                    <h3>Neural Processing</h3>
-                    <p>Advanced LLM integration with dynamic model switching and real-time performance optimization.</p>
+                    <div class="card-glow"></div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-terminal"></i>
+                <div class="feature-card" data-aos="fade-up" data-delay="100">
+                    <div class="feature-glass">
+                        <div class="feature-icon">
+                            <i class="fas fa-terminal"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3>Dynamic Console</h3>
+                        <p>Rich interactive terminal interface with live streaming, colored output, and intelligent command system.</p>
+                        <div class="feature-stats">
+                            <span class="stat">Live Stream</span>
+                            <span class="stat">Colored UI</span>
+                        </div>
                     </div>
-                    <h3>Dynamic Console</h3>
-                    <p>Rich interactive terminal interface with live streaming, colored output, and command system.</p>
+                    <div class="card-glow"></div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-search"></i>
+                <div class="feature-card" data-aos="fade-up" data-delay="200">
+                    <div class="feature-glass">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3>Smart Search</h3>
+                        <p>Advanced conversation search and filtering with persistent history management and intelligent indexing.</p>
+                        <div class="feature-stats">
+                            <span class="stat">Full-text</span>
+                            <span class="stat">Persistent</span>
+                        </div>
                     </div>
-                    <h3>Smart Search</h3>
-                    <p>Advanced conversation search and filtering with persistent history management.</p>
+                    <div class="card-glow"></div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
+                <div class="feature-card" data-aos="fade-up" data-delay="300">
+                    <div class="feature-glass">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3>Performance Monitor</h3>
+                        <p>Real-time benchmarking, token tracking, and system resource monitoring with detailed analytics.</p>
+                        <div class="feature-stats">
+                            <span class="stat">Real-time</span>
+                            <span class="stat">Analytics</span>
+                        </div>
                     </div>
-                    <h3>Performance Monitor</h3>
-                    <p>Real-time benchmarking, token tracking, and system resource monitoring.</p>
+                    <div class="card-glow"></div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-cogs"></i>
+                <div class="feature-card" data-aos="fade-up" data-delay="400">
+                    <div class="feature-glass">
+                        <div class="feature-icon">
+                            <i class="fas fa-cogs"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3>Dynamic Config</h3>
+                        <p>Runtime configuration with persistent settings and flexible customization options for any workflow.</p>
+                        <div class="feature-stats">
+                            <span class="stat">Runtime</span>
+                            <span class="stat">Flexible</span>
+                        </div>
                     </div>
-                    <h3>Dynamic Config</h3>
-                    <p>Runtime configuration with persistent settings and flexible customization options.</p>
+                    <div class="card-glow"></div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-globe"></i>
+                <div class="feature-card" data-aos="fade-up" data-delay="500">
+                    <div class="feature-glass">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <h3>Cross-Platform</h3>
+                        <p>Native support for Windows, macOS, and Linux with unified experience and consistent performance.</p>
+                        <div class="feature-stats">
+                            <span class="stat">Universal</span>
+                            <span class="stat">Consistent</span>
+                        </div>
                     </div>
-                    <h3>Cross-Platform</h3>
-                    <p>Native support for Windows, macOS, and Linux with unified experience.</p>
+                    <div class="card-glow"></div>
                 </div>
             </div>
         </div>
@@ -148,45 +319,154 @@
 
     <!-- Demo Section -->
     <section id="demo" class="demo">
+        <div class="demo-bg">
+            <div class="demo-circuit"></div>
+        </div>
         <div class="container">
-            <h2 class="section-title">LIVE DEMO</h2>
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-play-circle"></i>
+                    <span>LIVE DEMO</span>
+                </div>
+                <h2 class="section-title">EXPERIENCE THE POWER</h2>
+                <p class="section-description">
+                    Watch our dynamic interface in action with real-time model switching and intelligent conversation management.
+                </p>
+            </div>
             <div class="demo-container">
                 <div class="demo-terminal">
-                    <div class="demo-header">
-                        <span class="demo-title">Lorapok Dynamic Chat Demo</span>
+                    <div class="terminal-glass">
+                        <div class="terminal-header">
+                            <div class="terminal-controls">
+                                <span class="control close"></span>
+                                <span class="control minimize"></span>
+                                <span class="control maximize"></span>
+                            </div>
+                            <div class="terminal-title">
+                                <i class="fas fa-terminal"></i>
+                                Lorapok Dynamic Chat v1.0.0
+                            </div>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-output" id="demo-output">
+                                <div class="terminal-line">
+                                    <span class="terminal-prompt">$</span>
+                                    <span class="terminal-command">python src/ollama_client.py</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-icon">🚀</span>
+                                    <span class="terminal-text">Starting Lorapok Dynamic Ollama LLM Chat Interface...</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-icon">🔗</span>
+                                    <span class="terminal-text">Connecting to 192.168.0.219...</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-success">✓</span>
+                                    <span class="terminal-text">Connection established successfully</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-info">🤖</span>
+                                    <span class="terminal-text">Lorapok Dynamic Ollama LLM Chat Interface</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-text">Connected to: 192.168.0.219 | Model: qwen2.5-coder:7b-instruct</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-prompt">></span>
+                                    <span class="terminal-input">Hello, can you help me with Python development?</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-ai">🤖 Assistant (qwen2.5-coder:7b-instruct)</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-response">Absolutely! I'd be happy to help you with Python development. I can assist with code writing, debugging, best practices, and more. What specific task are you working on?</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-prompt">></span>
+                                    <span class="terminal-input">/stats</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-info">📊</span>
+                                    <span class="terminal-text">Conversation Statistics:</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-text">• Total Messages: 2 | Avg Response: 1.2s | Tokens: 245</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-prompt">></span>
+                                    <span class="terminal-input">/model llama2:7b</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-success">✅</span>
+                                    <span class="terminal-text">Switched to: llama2:7b</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-prompt">></span>
+                                    <span class="terminal-input">Tell me a joke about programming</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-ai">🤖 Assistant (llama2:7b)</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-response">Why do programmers prefer dark mode? Because light attracts bugs! 🐛</span>
+                                </div>
+                                <div class="terminal-cursor">▊</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="demo-content" id="demo-content">
-                        <div class="demo-line">$ python src/ollama_client.py</div>
-                        <div class="demo-line">🚀 Starting Lorapok Dynamic Ollama LLM Chat Interface...</div>
-                        <div class="demo-line">🔗 Connecting to 192.168.0.219...</div>
-                        <div class="demo-line">🤖 Lorapok Dynamic Ollama LLM Chat Interface</div>
-                        <div class="demo-line">Connected to: 192.168.0.219</div>
-                        <div class="demo-line">Current Model: qwen2.5-coder:7b-instruct</div>
-                        <div class="demo-line">Available Models: 5</div>
-                        <div class="demo-line">You: Hello, can you help me with Python?</div>
-                        <div class="demo-line">Assistant (qwen2.5-coder:7b-instruct)</div>
-                        <div class="demo-line">Hello! I'd be happy to help you with Python...</div>
-                        <div class="demo-line">You: /stats</div>
-                        <div class="demo-line">Conversation Statistics:</div>
-                        <div class="demo-line">Total Messages: 2</div>
-                        <div class="demo-line">Avg Response Time: 1.2s</div>
-                        <div class="demo-line">Total Tokens: 245</div>
-                        <div class="demo-line">You: /model llama2:7b</div>
-                        <div class="demo-line">✅ Switched to: llama2:7b</div>
-                        <div class="demo-line">You: Tell me a joke</div>
-                        <div class="demo-line">Assistant (llama2:7b)</div>
-                        <div class="demo-line">Why don't scientists trust atoms?</div>
-                        <div class="demo-line">Because they make up everything! 🤡</div>
-                    </div>
+                    <div class="terminal-reflection"></div>
                 </div>
                 <div class="demo-info">
-                    <h3>Experience the Power</h3>
-                    <p>Watch our dynamic interface in action with real-time model switching, performance monitoring, and intelligent conversation management.</p>
-                    <div class="demo-features">
-                        <div class="demo-feature">
-                            <i class="fas fa-bolt"></i>
-                            <span>Live Streaming</span>
+                    <div class="demo-glass">
+                        <h3>Interactive Features</h3>
+                        <div class="demo-features">
+                            <div class="demo-feature">
+                                <div class="feature-icon-small">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Live Streaming</h4>
+                                    <p>Real-time response streaming with instant feedback</p>
+                                </div>
+                            </div>
+                            <div class="demo-feature">
+                                <div class="feature-icon-small">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Rich Formatting</h4>
+                                    <p>Colored output with syntax highlighting and formatting</p>
+                                </div>
+                            </div>
+                            <div class="demo-feature">
+                                <div class="feature-icon-small">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Dynamic Switching</h4>
+                                    <p>Seamlessly switch between different AI models</p>
+                                </div>
+                            </div>
+                            <div class="demo-feature">
+                                <div class="feature-icon-small">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Performance Stats</h4>
+                                    <p>Detailed analytics and performance monitoring</p>
+                                </div>
+                            </div>
                         </div>
+                        <a href="#guide" class="demo-cta">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
                         <div class="demo-feature">
                             <i class="fas fa-palette"></i>
                             <span>Rich UI</span>
@@ -205,69 +485,356 @@
         </div>
     </section>
 
-    <!-- Requirements Section -->
-    <section id="requirements" class="requirements">
+    <!-- Guide Section -->
+    <section id="guide" class="guide">
+        <div class="guide-bg">
+            <div class="guide-pattern"></div>
+        </div>
         <div class="container">
-            <h2 class="section-title">SYSTEM REQUIREMENTS</h2>
-            <div class="requirements-grid">
-                <div class="requirement-card">
-                    <h3><i class="fas fa-desktop"></i> DESKTOP APPLICATION</h3>
-                    <div class="requirement-details">
-                        <div class="requirement-item">
-                            <strong>OS</strong>
-                            <span>Windows 10+, macOS 12+, Ubuntu 22.04+</span>
-                        </div>
-                        <div class="requirement-item">
-                            <strong>CPU</strong>
-                            <span>Dual Core 2.0GHz (Quad Core 3.0GHz+ Recommended)</span>
-                        </div>
-                        <div class="requirement-item">
-                            <strong>RAM</strong>
-                            <span>4 GB (8 GB+ Recommended)</span>
-                        </div>
-                        <div class="requirement-item">
-                            <strong>Storage</strong>
-                            <span>2 GB free space</span>
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-book-open"></i>
+                    <span>USER GUIDE</span>
+                </div>
+                <h2 class="section-title">MASTER THE INTERFACE</h2>
+                <p class="section-description">
+                    Comprehensive guide to maximize your productivity with Lorapok Dynamic Chat Interface.
+                </p>
+            </div>
+
+            <div class="guide-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="getting-started">
+                        <i class="fas fa-rocket"></i>
+                        Getting Started
+                    </button>
+                    <button class="tab-btn" data-tab="commands">
+                        <i class="fas fa-terminal"></i>
+                        Commands
+                    </button>
+                    <button class="tab-btn" data-tab="models">
+                        <i class="fas fa-brain"></i>
+                        Models
+                    </button>
+                    <button class="tab-btn" data-tab="advanced">
+                        <i class="fas fa-cogs"></i>
+                        Advanced
+                    </button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Getting Started Tab -->
+                    <div class="tab-panel active" id="getting-started">
+                        <div class="guide-grid">
+                            <div class="guide-step">
+                                <div class="step-number">01</div>
+                                <div class="step-glass">
+                                    <h3>Installation</h3>
+                                    <div class="step-content">
+                                        <div class="code-block">
+                                            <div class="code-header">
+                                                <span>Terminal</span>
+                                                <button class="copy-btn" data-copy="pip install lorapok-chat">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <code>pip install lorapok-chat</code>
+                                        </div>
+                                        <p>Install the package via pip or download from our releases page.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-step">
+                                <div class="step-number">02</div>
+                                <div class="step-glass">
+                                    <h3>Ollama Setup</h3>
+                                    <div class="step-content">
+                                        <div class="code-block">
+                                            <div class="code-header">
+                                                <span>Terminal</span>
+                                                <button class="copy-btn" data-copy="ollama serve">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <code>ollama serve</code>
+                                        </div>
+                                        <p>Start your Ollama server and ensure it's running on your network.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-step">
+                                <div class="step-number">03</div>
+                                <div class="step-glass">
+                                    <h3>Launch Interface</h3>
+                                    <div class="step-content">
+                                        <div class="code-block">
+                                            <div class="code-header">
+                                                <span>Terminal</span>
+                                                <button class="copy-btn" data-copy="python -m lorapok_chat">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <code>python -m lorapok_chat</code>
+                                        </div>
+                                        <p>Launch the interface and start your AI conversation journey.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="guide-step">
+                                <div class="step-number">04</div>
+                                <div class="step-glass">
+                                    <h3>Configuration</h3>
+                                    <div class="step-content">
+                                        <p>Configure your connection settings and preferences for optimal performance.</p>
+                                        <div class="config-options">
+                                            <div class="config-item">
+                                                <span class="config-label">Server IP:</span>
+                                                <code>192.168.0.219</code>
+                                            </div>
+                                            <div class="config-item">
+                                                <span class="config-label">Default Model:</span>
+                                                <code>qwen2.5-coder:7b</code>
+                                            </div>
+                                            <div class="config-item">
+                                                <span class="config-label">Theme:</span>
+                                                <code>dark</code>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="requirement-card">
-                    <h3><i class="fas fa-code"></i> PYTHON PACKAGE</h3>
-                    <div class="requirement-details">
-                        <div class="requirement-item">
-                            <strong>Python</strong>
-                            <span>v3.8 or higher (3.11+ Recommended)</span>
+
+                    <!-- Commands Tab -->
+                    <div class="tab-panel" id="commands">
+                        <div class="commands-grid">
+                            <div class="command-category">
+                                <div class="category-header">
+                                    <i class="fas fa-robot"></i>
+                                    <h3>Model Management</h3>
+                                </div>
+                                <div class="command-list">
+                                    <div class="command-item">
+                                        <div class="command-code">/model &lt;name&gt;</div>
+                                        <div class="command-desc">Switch to a different AI model</div>
+                                        <div class="command-example">/model llama2:13b</div>
+                                    </div>
+                                    <div class="command-item">
+                                        <div class="command-code">/models</div>
+                                        <div class="command-desc">List all available models</div>
+                                        <div class="command-example">/models</div>
+                                    </div>
+                                    <div class="command-item">
+                                        <div class="command-code">/info</div>
+                                        <div class="command-desc">Show current model information</div>
+                                        <div class="command-example">/info</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="command-category">
+                                <div class="category-header">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <h3>Analytics & Stats</h3>
+                                </div>
+                                <div class="command-list">
+                                    <div class="command-item">
+                                        <div class="command-code">/stats</div>
+                                        <div class="command-desc">Show conversation statistics</div>
+                                        <div class="command-example">/stats</div>
+                                    </div>
+                                    <div class="command-item">
+                                        <div class="command-code">/performance</div>
+                                        <div class="command-desc">Display performance metrics</div>
+                                        <div class="command-example">/performance</div>
+                                    </div>
+                                    <div class="command-item">
+                                        <div class="command-code">/benchmark</div>
+                                        <div class="command-desc">Run performance benchmark</div>
+                                        <div class="command-example">/benchmark</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="command-category">
+                                <div class="category-header">
+                                    <i class="fas fa-search"></i>
+                                    <h3>Search & History</h3>
+                                </div>
+                                <div class="command-list">
+                                    <div class="command-item">
+                                        <div class="command-code">/search &lt;query&gt;</div>
+                                        <div class="command-desc">Search conversation history</div>
+                                        <div class="command-example">/search python functions</div>
+                                    </div>
+                                    <div class="command-item">
+                                        <div class="command-code">/history</div>
+                                        <div class="command-desc">Show recent conversations</div>
+                                        <div class="command-example">/history</div>
+                                    </div>
+                                    <div class="command-item">
+                                        <div class="command-code">/clear</div>
+                                        <div class="command-desc">Clear current conversation</div>
+                                        <div class="command-example">/clear</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="command-category">
+                                <div class="category-header">
+                                    <i class="fas fa-cogs"></i>
+                                    <h3>System Controls</h3>
+                                </div>
+                                <div class="command-list">
+                                    <div class="command-item">
+                                        <div class="command-code">/config</div>
+                                        <div class="command-desc">Show current configuration</div>
+                                        <div class="command-example">/config</div>
+                                    </div>
+                                    <div class="command-item">
+                                        <div class="command-code">/save</div>
+                                        <div class="command-desc">Save current settings</div>
+                                        <div class="command-example">/save</div>
+                                    </div>
+                                    <div class="command-item">
+                                        <div class="command-code">/quit</div>
+                                        <div class="command-desc">Exit the application</div>
+                                        <div class="command-example">/quit</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="requirement-item">
-                            <strong>Packages</strong>
-                            <span>requests, rich, psutil</span>
+                    </div>
+
+                    <!-- Models Tab -->
+                    <div class="tab-panel" id="models">
+                        <div class="models-showcase">
+                            <div class="model-categories">
+                                <div class="model-category">
+                                    <h3>Code & Programming</h3>
+                                    <div class="model-grid">
+                                        <div class="model-card">
+                                            <div class="model-icon">
+                                                <i class="fas fa-code"></i>
+                                            </div>
+                                            <h4>qwen2.5-coder</h4>
+                                            <p>Specialized in code generation, debugging, and programming assistance</p>
+                                            <div class="model-specs">
+                                                <span>7B parameters</span>
+                                                <span>Fast inference</span>
+                                            </div>
+                                        </div>
+                                        <div class="model-card">
+                                            <div class="model-icon">
+                                                <i class="fas fa-laptop-code"></i>
+                                            </div>
+                                            <h4>codellama</h4>
+                                            <p>Meta's Code Llama for comprehensive programming support</p>
+                                            <div class="model-specs">
+                                                <span>7B-34B parameters</span>
+                                                <span>High accuracy</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="model-category">
+                                    <h3>General Purpose</h3>
+                                    <div class="model-grid">
+                                        <div class="model-card">
+                                            <div class="model-icon">
+                                                <i class="fas fa-brain"></i>
+                                            </div>
+                                            <h4>llama2</h4>
+                                            <p>Meta's versatile language model for various tasks</p>
+                                            <div class="model-specs">
+                                                <span>7B-70B parameters</span>
+                                                <span>Balanced performance</span>
+                                            </div>
+                                        </div>
+                                        <div class="model-card">
+                                            <div class="model-icon">
+                                                <i class="fas fa-comments"></i>
+                                            </div>
+                                            <h4>mistral</h4>
+                                            <p>Efficient and capable model with strong reasoning</p>
+                                            <div class="model-specs">
+                                                <span>7B parameters</span>
+                                                <span>Fast & efficient</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="requirement-item">
-                            <strong>Ollama</strong>
-                            <span>v0.1.0 or higher</span>
-                        </div>
-                        <div class="requirement-item">
-                            <strong>Network</strong>
-                            <span>Local network access</span>
+                    </div>
+
+                    <!-- Advanced Tab -->
+                    <div class="tab-panel" id="advanced">
+                        <div class="advanced-grid">
+                            <div class="advanced-section">
+                                <h3>Performance Optimization</h3>
+                                <div class="optimization-tips">
+                                    <div class="tip-item">
+                                        <div class="tip-icon">
+                                            <i class="fas fa-tachometer-alt"></i>
+                                        </div>
+                                        <div class="tip-content">
+                                            <h4>GPU Acceleration</h4>
+                                            <p>Enable GPU support in Ollama for significantly faster inference speeds.</p>
+                                        </div>
+                                    </div>
+                                    <div class="tip-item">
+                                        <div class="tip-icon">
+                                            <i class="fas fa-memory"></i>
+                                        </div>
+                                        <div class="tip-content">
+                                            <h4>Memory Management</h4>
+                                            <p>Monitor RAM usage and adjust model sizes based on your system capabilities.</p>
+                                        </div>
+                                    </div>
+                                    <div class="tip-item">
+                                        <div class="tip-icon">
+                                            <i class="fas fa-network-wired"></i>
+                                        </div>
+                                        <div class="tip-content">
+                                            <h4>Network Optimization</h4>
+                                            <p>Use local network connections for minimal latency and maximum throughput.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="advanced-section">
+                                <h3>Advanced Configuration</h3>
+                                <div class="config-section">
+                                    <h4>Environment Variables</h4>
+                                    <div class="env-vars">
+                                        <div class="env-var">
+                                            <code>OLLAMA_HOST</code>
+                                            <span>Custom Ollama server address</span>
+                                        </div>
+                                        <div class="env-var">
+                                            <code>OLLAMA_MODELS</code>
+                                            <span>Custom models directory</span>
+                                        </div>
+                                        <div class="env-var">
+                                            <code>LORAPOK_THEME</code>
+                                            <span>Interface theme (dark/light)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Commands Section -->
-    <section class="commands">
-        <div class="container">
-            <h2 class="section-title">COMMAND SYSTEM</h2>
-            <div class="commands-grid">
-                <div class="command-category">
-                    <h3><i class="fas fa-robot"></i> MODEL MANAGEMENT</h3>
-                    <div class="command-list">
-                        <div class="command-item">
-                            <code>/model <name></code>
-                            <span>Switch to different model</span>
-                        </div>
                         <div class="command-item">
                             <code>/models</code>
                             <span>List available models</span>
@@ -330,83 +897,199 @@
 
     <!-- Download Section -->
     <section id="download" class="download">
-        <div class="container">
-            <h2 class="section-title">GET LORAPOK DYNAMIC CHAT</h2>
-            <div class="download-grid">
-                <div class="download-card">
-                    <div class="download-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <h3>Python Package</h3>
-                    <p>Install via pip for development and integration</p>
-                    <div class="download-code">
-                        <code>pip install -r requirements.txt</code>
-                    </div>
-                    <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/archive/refs/tags/v1.0.0.zip" class="btn btn-outline">
-                        <i class="fas fa-download"></i> DOWNLOAD SOURCE
-                    </a>
-                </div>
-                <div class="download-card featured">
-                    <div class="download-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <h3>GitHub Repository</h3>
-                    <p>Clone the complete project with all features</p>
-                    <div class="download-code">
-                        <code>git clone https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface.git</code>
-                    </div>
-                    <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-github"></i> VIEW ON GITHUB
-                    </a>
-                </div>
-                <div class="download-card">
-                    <div class="download-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <h3>Documentation</h3>
-                    <p>Complete setup and usage documentation</p>
-                    <div class="download-links">
-                        <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/tree/main/docs">Setup Guide</a>
-                        <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/tree/main/docs">Usage Guide</a>
-                        <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/tree/main/docs">API Reference</a>
-                    </div>
-                    <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/tree/main/docs" target="_blank" class="btn btn-outline">
-                        <i class="fas fa-external-link-alt"></i> VIEW DOCS
-                    </a>
-                </div>
-            </div>
+        <div class="download-bg">
+            <div class="download-particles"></div>
         </div>
-    </section>
-
-    <!-- API Section -->
-    <section id="api" class="api">
         <div class="container">
-            <h2 class="section-title">READY TO INTEGRATE?</h2>
-            <div class="api-content">
-                <div class="api-code">
-                    <h3>Python Integration</h3>
-                    <pre><code>from src.ollama_client import OllamaClient
-
-# Initialize client
-client = OllamaClient("192.168.0.219")
-
-# Start interactive chat
-client.chat()
-
-# Or use programmatically
-response = client.generate("Hello, AI!")
-print(response)</code></pre>
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-download"></i>
+                    <span>DOWNLOAD</span>
                 </div>
-                <div class="api-features">
-                    <h3>Integration Features</h3>
-                    <ul>
-                        <li><i class="fas fa-check"></i> RESTful API compatible</li>
-                        <li><i class="fas fa-check"></i> Streaming responses</li>
-                        <li><i class="fas fa-check"></i> Model management</li>
-                        <li><i class="fas fa-check"></i> Performance monitoring</li>
-                        <li><i class="fas fa-check"></i> Conversation history</li>
-                        <li><i class="fas fa-check"></i> Cross-platform support</li>
-                    </ul>
+                <h2 class="section-title">GET STARTED NOW</h2>
+                <p class="section-description">
+                    Choose your preferred installation method and begin your AI journey today.
+                </p>
+            </div>
+
+            <div class="download-options">
+                <div class="download-main">
+                    <div class="download-glass">
+                        <div class="download-header">
+                            <div class="download-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="download-info">
+                                <h3>Lorapok Dynamic Chat v1.0.0</h3>
+                                <p>Complete AI interface with all features</p>
+                                <div class="download-meta">
+                                    <span class="version">Version 1.0.0</span>
+                                    <span class="size">Size: ~2.5 MB</span>
+                                    <span class="date">Updated: Dec 2024</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="download-methods">
+                            <div class="method-tabs">
+                                <button class="method-tab active" data-method="pip">
+                                    <i class="fab fa-python"></i>
+                                    Pip Install
+                                </button>
+                                <button class="method-tab" data-method="source">
+                                    <i class="fas fa-code"></i>
+                                    Source Code
+                                </button>
+                                <button class="method-tab" data-method="docker">
+                                    <i class="fab fa-docker"></i>
+                                    Docker
+                                </button>
+                            </div>
+
+                            <div class="method-content">
+                                <div class="method-panel active" id="pip-method">
+                                    <div class="install-steps">
+                                        <div class="step">
+                                            <div class="step-number">1</div>
+                                            <div class="step-text">
+                                                <strong>Install Python Dependencies</strong>
+                                                <div class="code-snippet">
+                                                    <code>pip install requests rich psutil</code>
+                                                    <button class="copy-snippet" data-copy="pip install requests rich psutil">
+                                                        <i class="fas fa-copy"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="step">
+                                            <div class="step-number">2</div>
+                                            <div class="step-text">
+                                                <strong>Install Ollama</strong>
+                                                <div class="code-snippet">
+                                                    <code>curl -fsSL https://ollama.ai/install.sh | sh</code>
+                                                    <button class="copy-snippet" data-copy="curl -fsSL https://ollama.ai/install.sh | sh">
+                                                        <i class="fas fa-copy"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="step">
+                                            <div class="step-number">3</div>
+                                            <div class="step-text">
+                                                <strong>Download & Run</strong>
+                                                <div class="code-snippet">
+                                                    <code>python src/ollama_client.py</code>
+                                                    <button class="copy-snippet" data-copy="python src/ollama_client.py">
+                                                        <i class="fas fa-copy"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="method-panel" id="source-method">
+                                    <div class="source-options">
+                                        <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/archive/refs/tags/v1.0.0.zip" class="download-btn primary">
+                                            <div class="btn-content">
+                                                <i class="fas fa-download"></i>
+                                                <span>Download ZIP</span>
+                                            </div>
+                                            <div class="btn-size">2.5 MB</div>
+                                        </a>
+                                        <div class="clone-command">
+                                            <div class="command-label">Or clone with Git:</div>
+                                            <div class="code-snippet large">
+                                                <code>git clone https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface.git</code>
+                                                <button class="copy-snippet" data-copy="git clone https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface.git">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="method-panel" id="docker-method">
+                                    <div class="docker-setup">
+                                        <div class="docker-step">
+                                            <h4>Using Docker Compose</h4>
+                                            <div class="code-snippet">
+                                                <code>docker-compose up -d</code>
+                                                <button class="copy-snippet" data-copy="docker-compose up -d">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="docker-step">
+                                            <h4>Manual Docker Run</h4>
+                                            <div class="code-snippet">
+                                                <code>docker run -p 11434:11434 --name ollama ollama/ollama</code>
+                                                <button class="copy-snippet" data-copy="docker run -p 11434:11434 --name ollama ollama/ollama">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download-sidebar">
+                    <div class="system-reqs">
+                        <h3>System Requirements</h3>
+                        <div class="req-list">
+                            <div class="req-item">
+                                <i class="fas fa-microchip"></i>
+                                <div class="req-text">
+                                    <strong>CPU:</strong> 2.0 GHz Dual Core (Quad Core Recommended)
+                                </div>
+                            </div>
+                            <div class="req-item">
+                                <i class="fas fa-memory"></i>
+                                <div class="req-text">
+                                    <strong>RAM:</strong> 4 GB (8 GB Recommended)
+                                </div>
+                            </div>
+                            <div class="req-item">
+                                <i class="fas fa-hdd"></i>
+                                <div class="req-text">
+                                    <strong>Storage:</strong> 2 GB free space
+                                </div>
+                            </div>
+                            <div class="req-item">
+                                <i class="fab fa-python"></i>
+                                <div class="req-text">
+                                    <strong>Python:</strong> 3.8+ (3.11+ Recommended)
+                                </div>
+                            </div>
+                            <div class="req-item">
+                                <i class="fas fa-globe"></i>
+                                <div class="req-text">
+                                    <strong>OS:</strong> Windows, macOS, Linux
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="support-links">
+                        <h3>Need Help?</h3>
+                        <div class="support-list">
+                            <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/issues" class="support-link">
+                                <i class="fas fa-bug"></i>
+                                <span>Report Issues</span>
+                            </a>
+                            <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/discussions" class="support-link">
+                                <i class="fas fa-comments"></i>
+                                <span>Discussions</span>
+                            </a>
+                            <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/tree/main/docs" class="support-link">
+                                <i class="fas fa-book"></i>
+                                <span>Documentation</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -414,27 +1097,79 @@ print(response)</code></pre>
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="footer-bg">
+            <div class="footer-particles"></div>
+        </div>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fas fa-robot"></i>
-                    <span>LORAPOK DYNAMIC CHAT</span>
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-brain"></i>
+                            <div class="logo-glow"></div>
+                        </div>
+                        <div class="brand-text">
+                            <span class="brand-name">LORAPOK</span>
+                            <span class="brand-tag">Dynamic LLM Engine</span>
+                        </div>
+                    </div>
+                    <p class="brand-description">
+                        Revolutionizing AI interaction with professional-grade console interfaces and intelligent conversation management.
+                    </p>
                 </div>
+
                 <div class="footer-links">
-                    <a href="#features">Features</a>
-                    <a href="#demo">Demo</a>
-                    <a href="#requirements">Requirements</a>
-                    <a href="#download">Download</a>
-                    <a href="#api">API</a>
-                    <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface" target="_blank">GitHub</a>
+                    <div class="link-group">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#demo">Demo</a>
+                        <a href="#guide">Guide</a>
+                        <a href="#download">Download</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/tree/main/docs">Documentation</a>
+                        <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/issues">Support</a>
+                        <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface/discussions">Community</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="https://github.com/Maijied">About</a>
+                        <a href="https://maijied.github.io/Lorapok_Media_Player/">Projects</a>
+                        <a href="https://github.com/Maijied/Lorapok-Dynamic-Ollama-LLM-Chat-Interface">GitHub</a>
+                    </div>
                 </div>
-                <div class="footer-social">
-                    <a href="https://github.com/Maijied" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://maijied.github.io/Lorapok_Media_Player/" target="_blank"><i class="fas fa-play"></i></a>
+
+                <div class="footer-cta">
+                    <h4>Ready to Start?</h4>
+                    <p>Join thousands of developers using Lorapok for their AI workflows.</p>
+                    <a href="#download" class="footer-btn">
+                        <span>Get Started</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2026 LORAPOK TEAM. ALL RIGHTS RESERVED.</p>
+                <div class="footer-legal">
+                    <p>&copy; 2026 Lorapok Team. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">License</a>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/Maijied" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://maijied.github.io/Lorapok_Media_Player/" target="_blank" class="social-link">
+                        <i class="fas fa-play-circle"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
